@@ -33,7 +33,7 @@ int main() {
         v.push_back(i);
     }
     auto begin = v.begin(), end = v.end();
-    // auto mid = (begin + end) / 2;
+    // auto mid = (begin + end) / 2; This statement is wrong: there is no "+" operator for iterators.
     auto mid = begin + (end - begin) / 2;
     int sought = 8;
     // please note that *mid is the value of what it points to
