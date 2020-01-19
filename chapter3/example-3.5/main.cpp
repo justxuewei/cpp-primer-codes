@@ -1,5 +1,7 @@
 #include <iostream>
 
+using namespace std;
+
 int main() {
 
     // array definiation
@@ -34,6 +36,15 @@ int main() {
     int (*Parray)[10] = &arr; // Parray points to an array of ten ints
     int (&arrRef)[10] = arr; // arrRef refers to an array of ten ints
     int *(&arry)[10] = ptrs; // arry is a reference to an array of ten pointers
+
+    // number counter of grades of array version
+    unsigned scores[11] = {}; // 11 buckets, all value initialized to 0
+    unsigned grade;
+    while (cin >> grade) {
+        if (grade <= 100) {
+            scores[grade/10]++;
+        }
+    }
 
     return 0;
 }
